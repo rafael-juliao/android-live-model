@@ -3,20 +3,22 @@ package com.lfyt.mobile.android.livemodel;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SubscriptionList extends ArrayList<LiveModelAPI>{
+public final class SubscriptionList extends ArrayList<LiveModelAPI>{
 
-
-    public boolean addAll(LiveModelAPI... liveModelAPIS) {
+    public final void set(LiveModelAPI... list){
+        super.addAll(Arrays.asList(list));
+    }
+    public final boolean addAll(LiveModelAPI... liveModelAPIS) {
         return super.addAll(Arrays.asList(liveModelAPIS));
     }
 
-    void subscribe(Object object){
+    public final void subscribe(Object object){
         for(int i = 0 ; i < size() ; i++){
             get(i).subscribe(object);
         }
     }
 
-    void unsubscribe(Object object){
+    public final void unsubscribe(Object object){
         for(int i = 0 ; i < size() ; i++){
             get(i).subscribe(object);
         }

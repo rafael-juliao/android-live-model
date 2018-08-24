@@ -24,7 +24,7 @@ public final class SubscriptionList extends ArrayList<LiveModelAPI>{
 
     public final void unsubscribe(Object object){
         for(int i = 0 ; i < size() ; i++){
-            get(i).subscribe(object);
+            get(i).unsubscribe(object);
         }
     }
 }

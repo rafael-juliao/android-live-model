@@ -5,11 +5,15 @@ import java.util.Arrays;
 
 public final class SubscriptionList extends ArrayList<LiveModelAPI>{
 
+    public final void add(LiveModelAPI... list){
+        super.addAll(Arrays.asList(list));
+    }
+
     public final void set(LiveModelAPI... list){
         super.addAll(Arrays.asList(list));
     }
-    public final boolean addAll(LiveModelAPI... liveModelAPIS) {
-        return super.addAll(Arrays.asList(liveModelAPIS));
+    public final boolean addAll(LiveModelAPI... list) {
+        return super.addAll(Arrays.asList(list));
     }
 
     public final void subscribe(Object object){
